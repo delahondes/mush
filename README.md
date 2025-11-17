@@ -8,3 +8,14 @@ I've seen a few integrated tools that claim to be better than tmux, so I've trie
 So discussing with ChatGPT, I was able to create a small bash function, that just do a minimal configuration that is fine for me and that is instantly available in all my remote servers (provided they have tmux and mosh, but these two utilities are widespread in linux world). 
 
 So here it is: add this function in your .bashrc or .bash_profile, make sure mosh and tmux are available on your servers, do your SSH class (like you should already have done: e.g. copy your SSH key to the different servers and correctly set up your .ssh/config so you have a nice nickname for all your servers and you  don't need to specify user, ports, address).
+
+## features
+
+Usage: mush <server_name>
+
+- launch a mosh session to the remote server,
+- pick a random color derived from the server name (so that each server has its color),
+- set a tmux status bar in the server color featuring the server name in square brackets on the left, and the local hour on the right,
+- try to recover the last tmux session OR start a new one.
+
+Feel free to modify and tailor to your specific needs.
